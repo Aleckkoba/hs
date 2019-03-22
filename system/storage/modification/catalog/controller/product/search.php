@@ -504,17 +504,6 @@ class ControllerProductSearch extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-				// BuyOneClick
-					$this->load->model('setting/setting');
-					$current_language_id = $this->config->get('config_language_id');
-					$data['buyoneclick_name'] = $this->config->get('buyoneclick_name_'.$current_language_id);
-					$data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-				// BuyOneClickEnd
-				
-
 		$this->response->setOutput($this->load->view('product/search', $data));
 	}
 }

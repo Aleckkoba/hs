@@ -19,17 +19,6 @@ $this->document->addStyle('catalog/view/theme/marketshop/stylesheet/owl.carousel
 		$this->load->model('tool/image');
 $data['module'] = $setting;
 
-
-				// BuyOneClick
-					$this->load->model('setting/setting');
-					$current_language_id = $this->config->get('config_language_id');
-					$data['buyoneclick_name'] = $this->config->get('buyoneclick_name_'.$current_language_id);
-					$data['buyoneclick_status_module'] = $this->config->get('buyoneclick_status_module');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-				// BuyOneClickEnd
-				
 		$data['products'] = array();
 
 			$data['marketshop_percentage_discount_badge'] = $this->config->get('marketshop_percentage_discount_badge');

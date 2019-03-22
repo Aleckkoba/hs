@@ -1350,33 +1350,6 @@ border-top:<?php echo $marketshop_menu_link_border_bottom_size ?>px <?php echo $
 ?>
 }
 </style>
-
-				<?php if ($buyoneclick_status || $buyoneclick_status_category) { ?>
-					<script src="catalog/view/javascript/buyoneclick.js" type="text/javascript"></script>
-					<?php if ($buyoneclick_validation_status) { ?>
-						<script src="catalog/view/javascript/jquery.mask.min.js" type="text/javascript"></script>
-						<script>
-							$(document).ready(function(){
-								$('#boc_phone').mask('<?php echo $buyoneclick_validation_type; ?>');
-							});
-						</script>
-					<?php } ?>
-					<?php if ($buyoneclick_ya_status || $buyoneclick_google_status) { ?>
-						<script>
-							function clickAnalytic(){
-								<?php if ($buyoneclick_ya_status) { ?>
-									yaCounter<?=$buyoneclick_ya_counter?>.reachGoal('<?=$buyoneclick_ya_identificator?>');
-								<?php } ?>
-								<?php if ($buyoneclick_google_status) { ?>
-									ga('send', 'event', '<?=$buyoneclick_google_category?>', '<?=$buyoneclick_google_action?>');
-								<?php } ?>
-								return true;
-							}
-						</script>
-					<?php } ?>
-					<?php if ($buyoneclick_style_status) { ?><link href="catalog/view/theme/default/stylesheet/buyoneclick.css" rel="stylesheet"><?php } ?>
-				<?php } ?>
-            
 </head>
 <body class="<?php echo $class; ?>">
 <?php if($marketshop_layout_style == 1) { ?>

@@ -420,22 +420,6 @@ $this->load->model('catalog/information');
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
-
-					$data['buyoneclick_status'] = $this->config->get('buyoneclick_status');
-					$data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
-
-					$data['buyoneclick_style_status'] = $this->config->get('buyoneclick_style_status');
-					$data['buyoneclick_validation_status'] = $this->config->get('buyoneclick_validation_status');
-					$data['buyoneclick_validation_type'] = $this->config->get('buyoneclick_validation_type');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_ya_counter'] = $this->config->get('buyoneclick_ya_counter');
-					$data['buyoneclick_ya_identificator'] = $this->config->get('buyoneclick_ya_identificator');
-
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-					$data['buyoneclick_google_category'] = $this->config->get('buyoneclick_google_category');
-					$data['buyoneclick_google_action'] = $this->config->get('buyoneclick_google_action');
-				
         $data['buyoneclick_status'] = $this->config->get('buyoneclick_status');
         $data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
 

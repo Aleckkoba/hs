@@ -107,9 +107,6 @@
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i> <span><?php echo $button_wishlist; ?></span></button>
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i> <span><?php echo $button_compare; ?></span></button>
               </div>
-				<?php if ($buyoneclick_status_category) { ?>
-					<button type="button" class="btn-block boc_order_category_btn" <?php if ($buyoneclick_ya_status || $buyoneclick_google_status) { ?> onClick="clickAnalytic(); return true;" <?php } ?> data-toggle="modal" data-target="#boc_order" data-product="<?php echo $product['name'] ?>" data-product_id="<?php echo $product['product_id']; ?>"><?php echo $buyoneclick_name; ?></button>
-				<?php } ?>
             </div>
           </div>
         </div>

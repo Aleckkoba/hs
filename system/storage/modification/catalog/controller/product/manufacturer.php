@@ -64,17 +64,6 @@ class ControllerProductManufacturer extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-				// BuyOneClick
-					$this->load->model('setting/setting');
-					$current_language_id = $this->config->get('config_language_id');
-					$data['buyoneclick_name'] = $this->config->get('buyoneclick_name_'.$current_language_id);
-					$data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-				// BuyOneClickEnd
-				
-
 		$this->response->setOutput($this->load->view('product/manufacturer_list', $data));
 	}
 
@@ -409,17 +398,6 @@ class ControllerProductManufacturer extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-				// BuyOneClick
-					$this->load->model('setting/setting');
-					$current_language_id = $this->config->get('config_language_id');
-					$data['buyoneclick_name'] = $this->config->get('buyoneclick_name_'.$current_language_id);
-					$data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-				// BuyOneClickEnd
-				
-
 			$this->response->setOutput($this->load->view('product/manufacturer_info', $data));
 		} else {
 			$url = '';
@@ -462,17 +440,6 @@ class ControllerProductManufacturer extends Controller {
 			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
 
 			$data['header'] = $this->load->controller('common/header');
-
-				// BuyOneClick
-					$this->load->model('setting/setting');
-					$current_language_id = $this->config->get('config_language_id');
-					$data['buyoneclick_name'] = $this->config->get('buyoneclick_name_'.$current_language_id);
-					$data['buyoneclick_status_category'] = $this->config->get('buyoneclick_status_category');
-
-					$data['buyoneclick_ya_status'] = $this->config->get('buyoneclick_ya_status');
-					$data['buyoneclick_google_status'] = $this->config->get('buyoneclick_google_status');
-				// BuyOneClickEnd
-				
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['column_left'] = $this->load->controller('common/column_left');
 

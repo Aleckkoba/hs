@@ -148,8 +148,6 @@ class ControllerCheckoutCart extends Controller {
 					}
 				}
 
-
-
 				$data['products'][] = array(
 					'cart_id'   => $product['cart_id'],
 					'thumb'     => $image,
@@ -264,7 +262,6 @@ class ControllerCheckoutCart extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-            file_put_contents('file_l.log', "567656756767".$data, FILE_APPEND);
 			$this->response->setOutput($this->load->view('checkout/cart', $data));
 		} else {
 			$data['heading_title'] = $this->language->get('heading_title');

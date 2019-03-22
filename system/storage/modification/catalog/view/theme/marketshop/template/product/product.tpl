@@ -294,10 +294,9 @@ $("#zoom_01").bind("click", function(e) {
               <?php if ($minimum > 1) { ?>
               <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
               <?php } ?>
-              <div class="cart ">
+              <div class="cart">
                 <div>
-
-                  <div class="qty ">
+                  <div class="qty">
                     <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
                     <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
                     <a class="qtyBtn plus" href="javascript:void(0);">+</a><br />
@@ -306,12 +305,20 @@ $("#zoom_01").bind("click", function(e) {
                     <div class="clear"></div>
                   </div>
                   <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg"><?php echo $button_cart; ?></button>
+                    <?php
+                    $buyoneclick_status = true;
+                    if ($buyoneclick_status) { ?>
+                        <br />
+                        <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block boc_order_btn" <?php if ($buyoneclick_ya_status || $buyoneclick_google_status) { ?> onClick="clickAnalytic(); return true;" <?php } ?> data-toggle="modal" data-target="#boc_order" data-product="<?php echo $heading_title; ?>" data-product_id="<?php echo $product_id; ?>"><?php echo $buyoneclick_name; ?></button>
+                    <?php }	?>
                 </div>
                 <div>
                   <button type="button" class="wishlist" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i> <?php echo $button_wishlist; ?></button>
                   <br />
                   <button type="button" class="wishlist" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i> <?php echo $button_compare; ?></button>
                 </div>
+
+
               </div>
             </div>
             <?php if ($review_status) { ?>

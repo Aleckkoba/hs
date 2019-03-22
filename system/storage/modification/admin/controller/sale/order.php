@@ -4,7 +4,6 @@ class ControllerSaleOrder extends Controller {
 
 	public function index() {
 		$this->load->language('sale/order');
-$this->load->language('sale/dmp_oqv');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -80,13 +79,6 @@ $this->load->language('sale/dmp_oqv');
 	}
 
 	protected function getList() {
-
-			$data['dmp_oqv_heading'] = $this->language->get('dmp_oqv_heading');
-			$data['dmp_oqv_close'] = $this->language->get('dmp_oqv_close');
-			$data['dmp_oqv_edit'] = $this->language->get('dmp_oqv_edit');
-			$data['dmp_oqv_open'] = $this->language->get('dmp_oqv_open');
-			$data['dmp_oqv_loading'] = $this->language->get('dmp_oqv_loading');
-			
 		if (isset($this->request->get['filter_order_id'])) {
 			$filter_order_id = $this->request->get['filter_order_id'];
 		} else {

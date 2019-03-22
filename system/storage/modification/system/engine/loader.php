@@ -49,7 +49,7 @@ final class Loader {
 				include_once(modification($file));
 	
 				$proxy = new Proxy();
-				
+//				var_dump('class: ', $class);
 				foreach (get_class_methods($class) as $method) {
 					$proxy->{$method} = $this->callback($this->registry, $route . '/' . $method);
 				}
@@ -157,6 +157,7 @@ final class Loader {
 			}
 			
 			// Store the model object
+
 			if (!isset($model[$route])) {
 				$file = DIR_APPLICATION . 'model/' .  substr($route, 0, strrpos($route, '/')) . '.php';
 				$class = 'Model' . preg_replace('/[^a-zA-Z0-9]/', '', substr($route, 0, strrpos($route, '/')));

@@ -304,12 +304,6 @@
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
               <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
-
-					<?php if ($buyoneclick_status) { ?>
-						<br />
-						<button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block boc_order_btn" <?php if ($buyoneclick_ya_status || $buyoneclick_google_status) { ?> onClick="clickAnalytic(); return true;" <?php } ?> data-toggle="modal" data-target="#boc_order" data-product="<?php echo $heading_title; ?>" data-product_id="<?php echo $product_id; ?>"><?php echo $buyoneclick_name; ?></button>
-					<?php }	?>
-				
             </div>
             <?php if ($minimum > 1) { ?>
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
@@ -382,9 +376,6 @@
               <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
               <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
             </div>
-				<?php if ($buyoneclick_status) { ?>
-					<button type="button" class="btn-block boc_order_category_btn" <?php if ($buyoneclick_ya_status || $buyoneclick_google_status) { ?> onClick="clickAnalytic(); return true;" <?php } ?> data-toggle="modal" data-target="#boc_order" data-product="<?php echo $product['name'] ?>" data-product_id="<?php echo $product['product_id']; ?>"><?php echo $buyoneclick_name; ?></button>
-				<?php } ?>
           </div>
         </div>
         <?php if (($column_left && $column_right) && (($i+1) % 2 == 0)) { ?>

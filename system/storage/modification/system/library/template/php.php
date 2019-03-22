@@ -10,10 +10,14 @@ final class PHP {
 	public function render($template) {
 		$file = DIR_TEMPLATE . $template;
 
+
+
 		if (is_file($file)) {
 			extract($this->data);
 
 			ob_start();
+
+//            die(var_dump($this->data));
 
 			require(modification($file));
 
